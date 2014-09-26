@@ -1,0 +1,5 @@
+project.ext
+ext{
+	someProp = 'asd123'
+	someProp2 = 'dslfkjsldf'+"$someProp"
+}

@@ -1,8 +1,10 @@
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
+apply from: 'properties.gradle'
 
 version = '1.0'
+
 
 // Uses JDK 7
 sourceCompatibility = 1.7
@@ -23,4 +25,10 @@ dependencies {
 	compile 'jstl:jstl:1.2'
 	//include in compile only, exclude in the war
 	providedCompile 'javax.servlet:servlet-api:2.5'
+}
+
+task printTest {
+	//println project.ext.myProp
+	println project.someProp
+	println project.someProp2
 }
